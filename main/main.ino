@@ -3,17 +3,16 @@
 #include "timer.h"
 #include "rgb.h"
 
-int buttonPin = 10;
-Button ModeButton(buttonPin);
+Button ModeButton;
 Display TimerDisplay;
 TimerLogic Logic;
 RGB RGBLed;
 
 void setup() {
   Serial.begin(9600);
-  pinMode(buttonPin, OUTPUT);
   TimerDisplay.DisplayInit();
   RGBLed.RGBInit();
+  ModeButton.ButtonInit();
 }
 
 void loop() {

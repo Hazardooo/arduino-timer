@@ -1,7 +1,7 @@
 #include "button.h"
 
-Button::Button(int buttonPin)
-  : ButtonPin(buttonPin) {
+Button::Button() {
+  ButtonPin = 10;
   Mode = 2;
   NextModeBlock = false;
 }
@@ -19,7 +19,11 @@ bool Button::isButtonPressed() {
   }
 }
 
-int Button::GetMode() {
+void Button ::ButtonInit() {
+  pinMode(ButtonPin, OUTPUT);
+}
+
+const int Button::GetMode() {
   return Mode;
 }
 

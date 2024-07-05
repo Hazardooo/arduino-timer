@@ -1,8 +1,6 @@
 #include "display.h"
 
-Display::Display(){
-
-};
+Display::Display(){};
 
 void Display::ShowDigit(int digit) {
   for (int i = 0; i < 4; i++) {    // Каждый разряд по очереди

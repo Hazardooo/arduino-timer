@@ -4,10 +4,11 @@
 
 class Button {
 public:
-  Button(int buttonPin);
+  Button();
   bool isButtonPressed();
   void NextMode();
-  int GetMode();
+  void ButtonInit();
+  const int GetMode();
 private:
   bool NextModeBlock;
   int ButtonPin;
