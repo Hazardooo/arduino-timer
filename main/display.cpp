@@ -10,11 +10,12 @@ void Display::ShowDigit(int digit) {
       digitalWrite(segmentsPins[k], !Digits[digit][k]);
     }
     digitalWrite(anodPins[i], HIGH);
-    delay(250);
-    digitalWrite(anodPins[i], LOW);
+    if (millis() - DisplayDelay > 1000) {
+      DisplayDelay = millis();
+      digitalWrite(anodPins[i], LOW);
+    }
   }
 }
-
 void Display::DisplayInit() {
   for (int i = 0; i < 4; i++) {
     pinMode(anodPins[i], OUTPUT);

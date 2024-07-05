@@ -1,7 +1,8 @@
 #include "button.h"
 
-Button::Button(int buttonPin): ButtonPin(buttonPin) {
-  Mode = 0;
+Button::Button(int buttonPin)
+  : ButtonPin(buttonPin) {
+  Mode = 2;
   NextModeBlock = false;
 }
 
